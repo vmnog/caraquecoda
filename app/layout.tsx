@@ -3,7 +3,7 @@ import './css/style.css'
 import { Inter, Architects_Daughter } from 'next/font/google'
 
 import Header from '@/components/ui/header'
-import Banner from '@/components/banner'
+// import Banner from '@/components/banner'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -19,7 +19,7 @@ const architects_daughter = Architects_Daughter({
 })
 
 export const metadata = {
-  title: 'caraquecoda',
+  title: 'CaraQueCoda | Cursos de Programação Web para Iniciantes',
   description: 'A escola de programação @caraquecoda é dedicada a fornecer educação de alta qualidade em programação web para iniciantes. Nossos cursos são desenvolvidos por Victor Nogueira, um experiente desenvolvedor e instrutor, e são projetados para ajudar você a alcançar seus objetivos na área de tecnologia. ',
 }
 
