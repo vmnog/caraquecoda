@@ -3,10 +3,12 @@
 import { FormEvent, useState } from "react"
 
 export default function Newsletter() {
+  const [email, setEmail] = useState('')
   const [wasEmailSent, setEmailWasSent] = useState(false)
 
   function handleSubmitEmail(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    if (!email) return
     setEmailWasSent(true)
   }
 
@@ -41,12 +43,12 @@ export default function Newsletter() {
             {/* CTA form */}
             <form className="w-full lg:w-1/2" onSubmit={handleSubmitEmail}>
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
-                <input type="email" disabled={wasEmailSent} className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400" placeholder="Seu melhor e-mail…" aria-label="Seu melhor e-mail…" />
-                <button type="submit" className="btn text-purple-600 bg-purple-100 hover:bg-white shadow">Assinar</button>
+                <input type="email" value={email} onChange={e => setEmail(e.target.value)} disabled={wasEmailSent} className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400 disabled:opacity-30" placeholder="Seu melhor e-mail…" aria-label="Seu melhor e-mail…" />
+                <button disabled={wasEmailSent} type="submit" className="btn text-purple-600 bg-purple-100 hover:bg-white shadow disabled:opacity-30">Assinar</button>
               </div>
               {/* Success message */}
               {wasEmailSent &&
-                <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Aguarde, entraremos em contato!</p>
+                <p className="text-center font-bold lg:text-left lg:absolute mt-2 text-sm">Aguarde, entraremos em contato!</p>
               }
             </form>
 
