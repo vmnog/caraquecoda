@@ -11,21 +11,18 @@ const testimonials = [
     text: "— “Os cursos da @caraquecoda mudaram minha vida. A mentoria do Victor Nogueira foi essencial para entender os conceitos e aplicar no meu dia a dia de trabalho.”",
     name: "Maria Souza",
     role: "Ex-aluno",
-    delay: "0"
   },
   {
     image: TestimonialImage02,
     text: "—  “A abordagem prática e o suporte contínuo fizeram toda a diferença. Hoje estou confiante em minhas habilidades como desenvolvedor web.”",
     name: "João Silva",
     role: "Ex-aluno",
-    delay: "200"
   },
   {
     image: TestimonialImage03,
     text: "— “Aprender na @caraquecoda foi uma experiência incrível. Consegui meu primeiro emprego como desenvolvedor web graças ao que aprendi aqui.”",
     name: "Lucas Pereira",
     role: "Ex-aluno",
-    delay: "400"
   }
 ];
 
@@ -49,7 +46,7 @@ export default function Testimonials() {
                 key={index}
                 className="flex flex-col h-full p-6 bg-gray-800"
                 data-aos="fade-up"
-                data-aos-delay={testimonial.delay}
+                data-aos-delay={index * 200}
               >
                 <div>
                   <div className="relative inline-flex flex-col mb-4">

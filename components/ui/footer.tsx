@@ -6,16 +6,32 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Twitter, Instagram, Github, Youtube } from 'lucide-react'
+import { Twitter, Instagram, Github, Youtube, Check } from 'lucide-react'
 import { twMerge } from 'tailwind-merge';
 
 const footerItems = {
+  cursosGratuitos: {
+    title: "Cursos Gratuitos",
+    links: [
+      { name: "GIT", href: "https://www.youtube.com/watch?v=wOLFus9DUxI", disabled: false },
+    ]
+  },
   cursosIniciantes: {
     title: "Cursos Iniciantes",
     links: [
       { name: "HTML5", href: "https://www.udemy.com/course/caraquecoda-curso-html5", disabled: false },
       { name: "CSS3", href: "/", disabled: true },
       { name: "Javascript ES6", href: "/", disabled: true }
+    ]
+  },
+  cloneInterfaceGratuitos: {
+    title: "Clone Interface Gratuitos",
+    links: [
+      { name: "Clone iFood", href: "https://youtube.com/playlist?list=PLCwsaNyAWqXoFYN-ZcQGE-RsdY1WrNrxA&si=lYTl9HRftCNYmK58", disabled: false },
+      { name: "Clone Uber", href: "/", disabled: true },
+      { name: "Clone AirBnB", href: "/", disabled: true },
+      { name: "Clone Instagram", href: "/", disabled: true },
+      { name: "Clone Twitter", href: "/", disabled: true }
     ]
   },
   cursosAvancados: {
@@ -28,16 +44,6 @@ const footerItems = {
       { name: "Banco de Dados e SQL", href: "/", disabled: true }
     ]
   },
-  projetosCompletos: {
-    title: "Projetos Completos",
-    links: [
-      { name: "Clone iFood", href: "https://youtube.com/playlist?list=PLCwsaNyAWqXoFYN-ZcQGE-RsdY1WrNrxA&si=lYTl9HRftCNYmK58", disabled: false },
-      { name: "Clone Uber", href: "/", disabled: true },
-      { name: "Clone AirBnB", href: "/", disabled: true },
-      { name: "Clone Instagram", href: "/", disabled: true },
-      { name: "Clone Twitter", href: "/", disabled: true }
-    ]
-  }
 };
 
 const socialLinks = [
@@ -59,7 +65,7 @@ export default function Footer() {
               <div className="text-gray-400">Junte-se a nós e transforme sua carreira com nossos cursos práticos e suporte personalizado. ©caraquecoda. Todos os direitos reservados.</div>
             </div>
             {/* 2nd, 3rd and 4th blocks */}
-            <div className="md:col-span-8 lg:col-span-7 grid sm:grid-cols-3 gap-8">
+            <div className="md:col-span-8 lg:col-span-7 grid sm:grid-cols-2 gap-8">
               {Object.values(footerItems).map((item, index) => (
                 <div key={index} className="text-sm">
                   <h6 className="text-gray-200 font-medium mb-1">{item.title}</h6>
@@ -73,10 +79,13 @@ export default function Footer() {
                             <TooltipTrigger>
                               <Link target='_blank' href={link.href} className={
                                 twMerge(
-                                  "text-gray-400 transition duration-150 ease-in-out",
+                                  "flex items-center gap-2 text-gray-400 transition duration-150 ease-in-out",
                                   link.disabled && "opacity-30 cursor-default",
                                   !link.disabled && "hover:text-gray-100 "
-                                )}>{link.name}</Link>
+                                )}>
+                                {!link.disabled && <Check className='text-green-500' size={12} />}
+                                {link.name}
+                              </Link>
                             </TooltipTrigger>
                           </Tooltip>
                         </TooltipProvider>
@@ -100,7 +109,7 @@ export default function Footer() {
               ))}
             </ul>
             {/* Copyrights note */}
-            <div className="text-gray-400 text-sm mr-4">&copy; caraquecoda. Todos os direitos reservados.</div>
+            <div className="text-gray-400 text-sm mr-4">&copy; CARAQUECODA LTDA. Todos os direitos reservados.</div>
           </div>
         </div>
       </div>
