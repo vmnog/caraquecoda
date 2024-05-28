@@ -2,14 +2,29 @@
 
 import { FormEvent, useState } from "react"
 
-export default function Newsletter() {
+export default function JoinMentorship() {
   const [email, setEmail] = useState('')
   const [wasEmailSent, setEmailWasSent] = useState(false)
 
-  function handleSubmitEmail(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmitEmail(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
+
     if (!email) return
+
     setEmailWasSent(true)
+
+    try {
+      await fetch('/api/mentorship/join', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ to: email }),
+      })
+    } catch (error) {
+      console.error(error)
+    }
+
   }
 
   return (
