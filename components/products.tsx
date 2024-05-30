@@ -48,7 +48,7 @@ export default function Products() {
           </div>
 
           {/* Courses */}
-          <div className="max-w-xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 items-start justify-center lg:max-w-none">
+          <div className="mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 items-start justify-center lg:max-w-none">
             {courses.map((course, index) => (
               <Link
                 target='_blank'
