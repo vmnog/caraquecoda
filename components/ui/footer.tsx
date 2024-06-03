@@ -109,7 +109,7 @@ export default function Footer() {
               ))}
             </ul>
             {/* Copyrights note */}
-            <div className="text-gray-400 text-sm mr-4">&copy; CARAQUECODA LTDA. Todos os direitos reservados.</div>
+            <div className="text-gray-400 text-sm mr-4">&copy; Victor Nogueira - Caraquecoda LTDA. Todos os direitos reservados.</div>
           </div>
         </div>
       </div>
