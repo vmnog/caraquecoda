@@ -1,5 +1,6 @@
 import './css/style.css'
 
+import { Analytics } from "@vercel/analytics/react"
 import { Inter, Architects_Daughter } from 'next/font/google'
 
 import Header from '@/components/ui/header'
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
+          <Analytics />
           {/* <Header /> */}
           {children}
           {/* <Banner /> */}

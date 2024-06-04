@@ -29,6 +29,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.3.0
+      '@vercel/analytics':
+        specifier: ^1.3.1
+        version: 1.3.1(next@14.2.3(@babel/core@7.24.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
       aos:
         specifier: ^3.0.0-beta.6
         version: 3.0.0-beta.6
@@ -1127,6 +1130,17 @@ packages:
 
   '@types/webpack@5.28.5':
     resolution: {integrity: sha512-wR87cgvxj3p6D0Crt1r5avwqffqPXUkNlnQ1mjU93G7gCuFjufZR4I6j8cz5g1F1tTYpfOOFvly+cmIQwL9wvw==}
+
+  '@vercel/analytics@1.3.1':
+    resolution: {integrity: sha512-xhSlYgAuJ6Q4WQGkzYTLmXwhYl39sWjoMA3nHxfkvG+WdBT25c563a7QhwwKivEOZtPJXifYHR1m2ihoisbWyA==}
+    peerDependencies:
+      next: '>= 13'
+      react: ^18 || ^19
+    peerDependenciesMeta:
+      next:
+        optional: true
+      react:
+        optional: true
 
   '@webassemblyjs/ast@1.12.1':
     resolution: {integrity: sha512-EKfMUOPRRUTy5UII4qJDGPpqfwjOmZ5jeGFwid9mnoqIFK+e0vqoi1qH56JpmZSzEL53jKnNzScdmftJyG5xWg==}
@@ -2289,6 +2303,9 @@ packages:
 
   serialize-javascript@6.0.2:
     resolution: {integrity: sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==}
+
+  server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
 
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -3566,6 +3583,13 @@ snapshots:
       - uglify-js
       - webpack-cli
 
+  '@vercel/analytics@1.3.1(next@14.2.3(@babel/core@7.24.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      server-only: 0.0.1
+    optionalDependencies:
+      next: 14.2.3(@babel/core@7.24.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react: 18.2.0
+
   '@webassemblyjs/ast@1.12.1':
     dependencies:
       '@webassemblyjs/helper-numbers': 1.11.6
@@ -4791,6 +4815,8 @@ snapshots:
   serialize-javascript@6.0.2:
     dependencies:
       randombytes: 2.1.0
+
+  server-only@0.0.1: {}
 
   shebang-command@2.0.0:
     dependencies:
