@@ -1,0 +1,58 @@
+import logo from '@/images/clients/unseal/logomark-dark.svg'
+import imageHero from './hero.jpg'
+import imageVictorNogueira from './victor-nogueira.jpg'
+
+export const caseStudy = {
+  client: 'Unseal',
+  title: 'Tenha controle da sua saúde',
+  description:
+    'Unseal é a primeira plataforma NFT onde os usuários podem criar e negociar NFTs de seus próprios registros de saúde pessoais, permitindo que eles assumam o controle de seus dados.',
+  summary: [
+    'Unseal é a primeira plataforma NFT onde os usuários podem criar e negociar NFTs de seus próprios registros de saúde pessoais, permitindo que eles assumam o controle de seus dados.',
+    'Construímos a infraestrutura blockchain que suporta a Unseal. Infelizmente, tivemos uma grande perda neste projeto quando a criptomoeda da Unseal, PlaceboCoin, foi a zero.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2022-10',
+  service: 'Desenvolvimento blockchain',
+  testimonial: {
+    author: { name: 'Emily Selman', role: 'Chefe de Engenharia na Unseal' },
+    content:
+      'A CARAQUECODA fez um trabalho incrível construindo nossa infraestrutura blockchain central e tenho certeza de que, assim que a PlaceboCoin se recuperar, eles poderão finalizar o projeto.',
+  },
+}
+
+export const metadata = {
+  title: `Estudo de Caso ${caseStudy.client}`,
+  description: caseStudy.description,
+}
+
+## Visão Geral
+
+Irritado porque o ginecologista de sua esposa não divulgaria os resultados do exame de Papanicolau, Kevin, o fundador da Unseal, teve a ideia de usar a blockchain para armazenar registros de saúde individuais.
+
+A Unseal nos procurou no início de seu desenvolvimento, tendo acabado de levantar fundos através de uma ICO de sua criptomoeda PlaceboCoin. Como nunca havíamos trabalhado em um produto web3, decidimos terceirizar o projeto para uma agência em Kiev e obter lucros no topo. Apesar das frequentes reclamações sobre ataques de mísseis e quedas de energia, os ucranianos entregaram o projeto antes do prazo.
+
+Depois de atingir um pico de $12 mil, a PlaceboCoin foi a zero em questão de horas. Como recebemos o pagamento em PlaceboCoin, mas nossos subcontratados insistiram em ser pagos em USD, tivemos uma enorme perda financeira neste projeto.
+
+## O que fizemos
+
+<TagList>
+  <TagListItem>Desenvolvimento blockchain</TagListItem>
+  <TagListItem>Backend (Solidity)</TagListItem>
+  <TagListItem>Contratos inteligentes</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Victor Nogueira', role: 'Fundador da CARAQUECODA' }}
+  image={{ src: imageVictorNogueira }}
+>
+  A CARAQUECODA fez um trabalho incrível construindo nossa infraestrutura blockchain central e tenho certeza de que, assim que a PlaceboCoin se recuperar, eles poderão finalizar o projeto.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="34%" label="Menos transações" />
+  <StatListItem value="10%" label="Transações mais lentas" />
+  <StatListItem value="1000ms" label="Latência de transação" />
+  <StatListItem value="3" label="Nós ativos" />
+</StatList>

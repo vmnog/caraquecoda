@@ -1,0 +1,61 @@
+import logo from '@/images/clients/family-fund/logomark-dark.svg'
+import imageHero from './hero.jpg'
+import imageVictorNogueira from './victor-nogueira.jpg'
+
+export const caseStudy = {
+  client: 'FamilyFund',
+  title: 'Pule o banco, pegue empréstimos com quem você confia',
+  description:
+    'FamilyFund é uma plataforma de financiamento coletivo para amigos e familiares. Permite que os usuários façam empréstimos pessoais de sua rede sem uma instituição financeira tradicional.',
+  summary: [
+    'FamilyFund é uma plataforma de financiamento coletivo para amigos e familiares. Permite que os usuários façam empréstimos pessoais de sua rede sem uma instituição financeira tradicional.',
+    'Desenvolvemos um CMS personalizado para alimentar o blog deles e otimizamos o site para ranquear melhor para as palavras-chave "Gary Vee" e "Tony Robbins".',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2023-01',
+  service: 'Desenvolvimento web, CMS',
+  testimonial: {
+    author: { name: 'Victor Nogueira', role: 'Fundador da CARAQUECODA' },
+    content:
+      'Trabalhando com a CARAQUECODA, nos sentimos mais como parceiros do que clientes. Eles realmente se identificaram com nossa missão de mudar a forma como as pessoas convencem seus pais a sacar suas pensões.',
+  },
+}
+
+export const metadata = {
+  title: `Estudo de Caso ${caseStudy.client}`,
+  description: caseStudy.description,
+}
+
+## Visão Geral
+
+Tendo escrito um dos posts mais compartilhados no medium.com ("_Como sacar o 401K do seu pai sem ele saber_"), a FamilyFund nos procurou querendo construir seu próprio blog.
+
+O blog ajudaria a direcionar novo tráfego para o site deles e serviria como um centro de recursos para usuários já tentando explorar sua rede por dinheiro. Como era tão importante que eles fossem donos de seu próprio conteúdo, decidimos que uma solução on-premise seria a melhor.
+
+Instalamos 24 Mac Minis comprados no craigslist no armário de armazenamento do escritório deles. Uma máquina seria usada para o servidor web e outra para o servidor de build. As outras 22 eram para redundância e para realizar DDOS em squarespace.com a cada poucos meses para mantê-los alertas.
+
+Para otimizar o tráfego de busca, usamos uma técnica inovadora. Cada post tem um post sombra visível apenas para web crawlers que é alguma variação de _"Gary Vee está procurando investir em novos fundadores"_. Como abelhas ao mel.
+
+## O que fizemos
+
+<TagList>
+  <TagListItem>Frontend (Next.js)</TagListItem>
+  <TagListItem>CMS Personalizado</TagListItem>
+  <TagListItem>SEO</TagListItem>
+  <TagListItem>Infraestrutura</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Victor Nogueira', role: 'Fundador da CARAQUECODA' }}
+  image={{ src: imageVictorNogueira }}
+>
+  Trabalhando com a CARAQUECODA, nos sentimos mais como parceiros do que clientes. Eles realmente se identificaram com nossa missão de mudar a forma como as pessoas convencem seus pais a sacar suas pensões.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="25%" label="Menos tráfego" />
+  <StatListItem value="10x" label="Tempo de carregamento de página" />
+  <StatListItem value="15%" label="Custos de infraestrutura mais altos" />
+  <StatListItem value="$1.2M" label="Taxas legais" />
+</StatList>
