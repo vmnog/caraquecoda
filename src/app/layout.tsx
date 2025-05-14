@@ -1,22 +1,34 @@
-import { type Metadata } from 'next'
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
-import { RootLayout } from '@/components/RootLayout'
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-import '@/styles/tailwind.css'
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s - CARAQUECODA',
-    default: 'CARAQUECODA - Soluções de software premium para o seu sucesso.',
-  },
-}
+  title: "CARAQUECODA",
+  description: "Soluções de Software - Tire sua ideia do papel",
+};
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="pt-BR" className="h-full bg-neutral-950 text-base antialiased">
-      <body className="flex min-h-full flex-col">
-        <RootLayout>{children}</RootLayout>
+    <html lang="pt-BR">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
       </body>
     </html>
-  )
+  );
 }
