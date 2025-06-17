@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${playfairDisplay.variable} antialiased`}
+        className={`${playfairDisplay.variable} antialiased min-h-dvh flex items-center justify-center`}
       >
         {children}
       </body>
