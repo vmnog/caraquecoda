@@ -43,7 +43,7 @@ export default function Home() {
 				<div key="logo" className="size-14 relative cursor-pointer">
 					<Tooltip>
 						<TooltipTrigger asChild>
-							<Link prefetch href="/" className="block">
+							<Link prefetch href="/sobre" className="block">
 								<Image
 									className="dark:invert"
 									src="/caraquecoda-logo.svg"
@@ -53,7 +53,7 @@ export default function Home() {
 							</Link>
 						</TooltipTrigger>
 						<TooltipContent side="top" align="center">
-							<p>Voltar</p>
+							<p>Sobre</p>
 						</TooltipContent>
 					</Tooltip>
 				</div>
